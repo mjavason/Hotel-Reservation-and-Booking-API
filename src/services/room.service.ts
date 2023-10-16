@@ -1,4 +1,4 @@
-import Model from '../database/models/room.model';
+import Model from '../models/room.model';
 
 class Service {
   async create(body: object) {

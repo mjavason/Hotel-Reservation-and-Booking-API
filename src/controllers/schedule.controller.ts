@@ -40,8 +40,8 @@ class Controller {
 
   startDailyJobs() {
     scheduleService.startDaily(async () => {
-      roomController.remindReservationHolders(24);
-      roomController.markRoomsAsDone();
+      // roomController.remindReservationHolders(24);
+      // roomController.markRoomsAsDone();
     });
   }
 

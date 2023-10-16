@@ -59,9 +59,6 @@ export const MESSAGES = {
 };
 
 export const LINKS = {
-  API_DOCUMENTATION:
-    process.env.API_DOCUMENTATION_URL ||
-    'https://documenter.getpostman.com/view/29278179/2s9YR6baKR',
   EMAIL: 'mailto:app@mail.online',
   GOOGLE_MEET: 'https://meet.google.com',
   PHONE_CALL: 'tel:+2349999999999',
@@ -76,3 +73,40 @@ export const DATABASES = {
   RESET_TOKEN: 'reset_token',
   ROOM: 'room',
 };
+
+// Swagger options
+export const SWAGGER_OPTIONS = {
+  swaggerDefinition: {
+    info: {
+      title: 'Hotel Reservation and Booking API',
+      version: '1.0.0',
+      description:
+        'The Hotel Reservation and Booking API is a comprehensive system for making hotel reservations and managing bookings. It provides functionalities for reserving rooms, managing bookings, and ensuring a smooth booking experience for both users and hotel administrators. This API empowers users to explore, book, and manage hotel accommodations with ease.',
+      contact: {
+        name: 'Orji Michael Chukwuebuka',
+        email: 'orjimichael4886@gmail.com',
+      },
+    },
+    basePath: '',
+    tags: [
+      {
+        name: 'Reservations',
+        description: 'API operations related to reservations, including booking, cancellation, and status inquiries.',
+      },
+      {
+        name: 'Rooms',
+        description: 'API operations related to rooms, such as room details, availability, and pricing.',
+      },
+      {
+        name: 'Auth',
+        description: 'API operations related to user authentication and authorization, including login and access control.',
+      },
+      {
+        name: 'Default',
+        description: 'Default and miscellaneous API operations.',
+      },
+    ],
+  },
+  apis: ['**/*.ts'], // Define the paths to your API routes
+};
+

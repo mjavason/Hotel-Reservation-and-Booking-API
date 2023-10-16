@@ -1,4 +1,4 @@
-import Model from '../database/models/user.model';
+import Model from '../models/user.model';
 import Interface from '../interfaces/user.interface';
 
 class Service {

@@ -1,7 +1,7 @@
-import IResetToken from '../../interfaces/reset_token.interface';
+import IResetToken from '../interfaces/reset_token.interface';
 import { Schema, model } from 'mongoose';
 import autopopulate from 'mongoose-autopopulate'; // Import the mongoose-autopopulate plugin
-import { DATABASES } from '../../constants';
+import { DATABASES } from '../constants';
 
 // Define the schema
 const resetTokenSchema = new Schema<IResetToken>(

@@ -11,11 +11,6 @@ preMiddleware(app);
 //default response
 app.get('/', (req: Request, res:Response) => SuccessMsgResponse(res, MESSAGES.DEFAULT));
 
-//documentation redirect
-app.get('/docs', (req:Request, res:Response) => {
-  res.redirect(LINKS.API_DOCUMENTATION);
-});
-
 // importe all routes
 app.use('/api', rootRoutes);
 

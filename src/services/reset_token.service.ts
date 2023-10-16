@@ -1,4 +1,4 @@
-import Model from '../database/models/reset_token.model';
+import Model from '../models/reset_token.model';
 
 class Service {
   async create(body: object) {
