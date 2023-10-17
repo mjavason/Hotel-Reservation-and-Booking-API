@@ -20,8 +20,29 @@ router.get('/:pagination', roomController.getAll);
 
 router.post('/', processRequestBody(roomValidation.create.body), roomController.create);
 
+
 router.patch('/:id', processRequestBody(roomValidation.update.body), roomController.update);
 
+/**
+ * @swagger
+ * /api/rooms/{id}:
+ *   delete:
+ *     summary: Delete a room
+ *     description: Delete a room based on the provided ID.
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         description: The ID of the room to delete.
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Successfully deleted the room.
+ *       400:
+ *         description: Bad request.
+ *     tags:
+ *       - Rooms
+ */
 router.delete('/:id', processRequestParams(roomValidation.delete.params), roomController.delete);
 
 export default router;

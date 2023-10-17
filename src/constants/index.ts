@@ -77,6 +77,7 @@ export const DATABASES = {
 // Swagger options
 export const SWAGGER_OPTIONS = {
   swaggerDefinition: {
+    openapi: '3.0.0',
     info: {
       title: 'Hotel Reservation and Booking API',
       version: '1.0.0',
@@ -87,7 +88,20 @@ export const SWAGGER_OPTIONS = {
         email: 'orjimichael4886@gmail.com',
       },
     },
-    basePath: '',
+    servers: [
+      {
+        url: 'http://localhost:5000/api/v1', // Development environment
+        description: 'Development Environment',
+      },
+      {
+        url: 'https://staging.example.com/api/v1', // Staging environment
+        description: 'Staging Environment',
+      },
+      {
+        url: 'https://api.example.com/api/v1', // Production environment
+        description: 'Production Environment',
+      },
+    ],
     tags: [
       {
         name: 'Reservations',
@@ -98,7 +112,7 @@ export const SWAGGER_OPTIONS = {
         description: 'API operations related to rooms, such as room details, availability, and pricing.',
       },
       {
-        name: 'Auth',
+        name: 'Authentication',
         description: 'API operations related to user authentication and authorization, including login and access control.',
       },
       {
@@ -107,6 +121,6 @@ export const SWAGGER_OPTIONS = {
       },
     ],
   },
-  apis: ['**/*.ts'], // Define the paths to your API routes
+  apis: ['**/*.jsdoc.ts'], // Define the paths to your API routes
 };
 
